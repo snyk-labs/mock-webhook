@@ -11,10 +11,9 @@ import datetime
 
 JSON = sys.argv[1]
 URL = sys.argv[2]
+SECRET = sys.argv[3]
 
 USERAGENT = 'Snyk-Webhooks'
-
-SIGNATURE = 'averylongsecrettouseforthis'
 
 def generate_signature(data: str, secret: str) -> str:
 
@@ -31,7 +30,7 @@ vulns = open(JSON)
 data = json.load(vulns)
 data = json.dumps(data)
 
-sig = generate_signature(data,SIGNATURE)
+sig = generate_signature(data,SECRET)
 
 headers = {
     'X-Hub-Signature'   : f'sha256={sig}',
