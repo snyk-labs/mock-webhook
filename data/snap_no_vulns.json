@@ -1,0 +1,41 @@
+{
+    "project": {
+      "id": "08218f17-b2be-4c3e-a05c-b655e1e0eb93",
+      "name": "pip-req",
+      "created": "2021-03-18T15:04:03.191Z",
+      "origin": "cli",
+      "type": "pip",
+      "readOnly": false,
+      "testFrequency": "daily",
+      "totalDependencies": 14,
+      "issueCountsBySeverity": {
+        "low": 3,
+        "high": 10,
+        "medium": 31
+      },
+      "remoteRepoUrl": "http://github.com/mrzarquon/pip-req.git",
+      "imageTag": "0.0.0",
+      "lastTestedDate": "2021-03-19T04:37:30.079Z",
+      "browseUrl": "https://app.snyk.io/org/angrydome/project/08218f17-b2be-4c3e-a05c-b655e1e0eb93",
+      "importingUser": null,
+      "owner": null,
+      "tags": [],
+      "isMonitored": true,
+      "attributes": {
+        "criticality": [],
+        "lifecycle": [],
+        "environment": []
+      }
+    },
+    "org": {
+      "id": "1b48e2c4-6ca8-455f-a73f-d2f6f2a6b225",
+      "name": "Angrydome",
+      "slug": "angrydome",
+      "url": "https://app.snyk.io/org/angrydome",
+      "group": {
+        "name": "Chris Barker",
+        "id": "dcf9cae3-2f54-4ad2-98af-e70b844657f3"
+      }
+    },
+    "newIssues": []
+  }

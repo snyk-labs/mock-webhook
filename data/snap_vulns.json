@@ -1,0 +1,358 @@
+{
+    "project": {
+      "id": "08218f17-b2be-4c3e-a05c-b655e1e0eb93",
+      "name": "pip-req",
+      "created": "2021-03-18T15:04:03.191Z",
+      "origin": "cli",
+      "type": "pip",
+      "readOnly": false,
+      "testFrequency": "daily",
+      "totalDependencies": 6,
+      "issueCountsBySeverity": {
+        "low": 0,
+        "high": 0,
+        "medium": 1
+      },
+      "remoteRepoUrl": "http://github.com/mrzarquon/pip-req.git",
+      "imageTag": "0.0.0",
+      "lastTestedDate": "2021-03-19T10:41:15.869Z",
+      "browseUrl": "https://app.snyk.io/org/angrydome/project/08218f17-b2be-4c3e-a05c-b655e1e0eb93",
+      "importingUser": null,
+      "owner": null,
+      "tags": [],
+      "isMonitored": true,
+      "attributes": {
+        "criticality": [],
+        "lifecycle": [],
+        "environment": []
+      }
+    },
+    "org": {
+      "id": "1b48e2c4-6ca8-455f-a73f-d2f6f2a6b225",
+      "name": "Angrydome",
+      "slug": "angrydome",
+      "url": "https://app.snyk.io/org/angrydome",
+      "group": {
+        "name": "Chris Barker",
+        "id": "dcf9cae3-2f54-4ad2-98af-e70b844657f3"
+      }
+    },
+    "newIssues": [
+      {
+        "id": "SNYK-PYTHON-RSA-1038401",
+        "issueType": "vuln",
+        "pkgName": "rsa",
+        "pkgVersions": [
+          "3.1.2"
+        ],
+        "priorityScore": 589,
+        "priority": {
+          "score": 589,
+          "factors": [
+            {
+              "name": "isFixable",
+              "description": "Has a fix available"
+            },
+            {
+              "name": "cvssScore",
+              "description": "CVSS 7.5"
+            }
+          ]
+        },
+        "issueData": {
+          "id": "SNYK-PYTHON-RSA-1038401",
+          "title": "Timing Attack",
+          "severity": "high",
+          "url": "https://snyk.io/vuln/SNYK-PYTHON-RSA-1038401",
+          "description": "## Overview\n[rsa](https://pypi.org/project/rsa/) is a pure-Python RSA implementation.\n\nAffected versions of this package are vulnerable to Timing Attack via timed processing of valid `PKCS#1` v1.5 ciphertext.\n## Remediation\nUpgrade `rsa` to version 4.7 or higher.\n## References\n- [GitHub Issue](https://github.com/sybrenstuvel/python-rsa/issues/165)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=1889972)\n",
+          "identifiers": {
+            "CVE": [
+              "CVE-2020-25658"
+            ],
+            "CWE": [
+              "CWE-208"
+            ]
+          },
+          "credit": [
+            "Unknown"
+          ],
+          "exploitMaturity": "no-known-exploit",
+          "semver": {
+            "vulnerable": [
+              "[2.0,4.7)"
+            ]
+          },
+          "publicationTime": "2020-11-10T15:27:31Z",
+          "disclosureTime": "2020-11-09T00:00:00Z",
+          "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "cvssScore": 7.5,
+          "functions": [],
+          "language": "python",
+          "patches": [],
+          "nearestFixedInVersion": ""
+        },
+        "isPatched": false,
+        "isIgnored": false,
+        "fixInfo": {
+          "isUpgradable": false,
+          "isPinnable": true,
+          "isPatchable": false,
+          "isPartiallyFixable": true,
+          "nearestFixedInVersion": ""
+        }
+      },
+      {
+        "id": "SNYK-PYTHON-RSA-40377",
+        "issueType": "vuln",
+        "pkgName": "rsa",
+        "pkgVersions": [
+          "3.1.2"
+        ],
+        "priorityScore": 586,
+        "priority": {
+          "score": 586,
+          "factors": [
+            {
+              "name": "exploitMaturity",
+              "description": "Proof of Concept exploit"
+            },
+            {
+              "name": "isFixable",
+              "description": "Has a fix available"
+            },
+            {
+              "name": "cvssScore",
+              "description": "CVSS 5.3"
+            }
+          ]
+        },
+        "issueData": {
+          "id": "SNYK-PYTHON-RSA-40377",
+          "title": "Improper Input Validation",
+          "severity": "medium",
+          "url": "https://snyk.io/vuln/SNYK-PYTHON-RSA-40377",
+          "description": "## Overview\r\n[`rsa`](https://pypi.python.org/pypi/rsa) is a Pure-Python RSA implementation.\r\n\r\nThe verify function in the RSA package for Python (Python-RSA) before 3.3 allows attackers to spoof signatures with a small public exponent via crafted signature padding, aka a Berserk attack.\r\n\r\n## References\r\n- [NVD](https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-1494)\r\n- [Bitbucket PR](https://bitbucket.org/sybren/python-rsa/pull-requests/14/security-fix-bb06-attack-in-verify-by/diff)\r\n- [Bitbucket Commit](https://bitbucket.org/sybren/python-rsa/commits/0cbcc529926afd61c6df4f50cfc29971beafd2c2?at=default)",
+          "identifiers": {
+            "CVE": [
+              "CVE-2016-1494"
+            ],
+            "CWE": [
+              "CWE-20"
+            ]
+          },
+          "credit": [
+            "Filippo Valsorda"
+          ],
+          "exploitMaturity": "proof-of-concept",
+          "semver": {
+            "vulnerable": [
+              "[,3.3)"
+            ]
+          },
+          "publicationTime": "2015-12-15T00:27:53Z",
+          "disclosureTime": "2015-12-15T00:27:53Z",
+          "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N/E:P/RL:O/RC:R",
+          "cvssScore": 5.3,
+          "functions": [],
+          "language": "python",
+          "patches": [],
+          "nearestFixedInVersion": ""
+        },
+        "isPatched": false,
+        "isIgnored": false,
+        "fixInfo": {
+          "isUpgradable": false,
+          "isPinnable": true,
+          "isPatchable": false,
+          "isPartiallyFixable": true,
+          "nearestFixedInVersion": ""
+        }
+      },
+      {
+        "id": "SNYK-PYTHON-RSA-40541",
+        "issueType": "vuln",
+        "pkgName": "rsa",
+        "pkgVersions": [
+          "3.1.2"
+        ],
+        "priorityScore": 479,
+        "priority": {
+          "score": 479,
+          "factors": [
+            {
+              "name": "isFixable",
+              "description": "Has a fix available"
+            },
+            {
+              "name": "cvssScore",
+              "description": "CVSS 5.3"
+            }
+          ]
+        },
+        "issueData": {
+          "id": "SNYK-PYTHON-RSA-40541",
+          "title": "Timing Attack",
+          "severity": "medium",
+          "url": "https://snyk.io/vuln/SNYK-PYTHON-RSA-40541",
+          "description": "## Overview\n[`rsa`](https://pypi.python.org/pypi/rsa) is a Pure-Python RSA implementation.\n\nAffected versions of this package are vulnerable to Timing attacks.\n\n## References\n- [GitHub Issue](https://github.com/sybrenstuvel/python-rsa/issues/19)\n- [GitHub Commit](https://github.com/sybrenstuvel/python-rsa/commit/2310b34bdb530e0bad793d42f589c9f848ff181b)\n",
+          "identifiers": {
+            "CVE": [],
+            "CWE": [
+              "CWE-208"
+            ]
+          },
+          "credit": [
+            "Manuel Aude Morales"
+          ],
+          "exploitMaturity": "no-known-exploit",
+          "semver": {
+            "vulnerable": [
+              "[3.0,3.4.0)"
+            ]
+          },
+          "publicationTime": "2013-11-15T02:34:45.265000Z",
+          "disclosureTime": "2013-11-15T02:34:45.265000Z",
+          "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "cvssScore": 5.3,
+          "functions": [],
+          "language": "python",
+          "patches": [],
+          "nearestFixedInVersion": ""
+        },
+        "isPatched": false,
+        "isIgnored": false,
+        "fixInfo": {
+          "isUpgradable": false,
+          "isPinnable": true,
+          "isPatchable": false,
+          "isPartiallyFixable": true,
+          "nearestFixedInVersion": ""
+        }
+      },
+      {
+        "id": "SNYK-PYTHON-RSA-40542",
+        "issueType": "vuln",
+        "pkgName": "rsa",
+        "pkgVersions": [
+          "3.1.2"
+        ],
+        "priorityScore": 589,
+        "priority": {
+          "score": 589,
+          "factors": [
+            {
+              "name": "isFixable",
+              "description": "Has a fix available"
+            },
+            {
+              "name": "cvssScore",
+              "description": "CVSS 7.5"
+            }
+          ]
+        },
+        "issueData": {
+          "id": "SNYK-PYTHON-RSA-40542",
+          "title": "Authentication Bypass",
+          "severity": "high",
+          "url": "https://snyk.io/vuln/SNYK-PYTHON-RSA-40542",
+          "description": "## Overview\n[`rsa`](https://pypi.python.org/pypi/rsa) is a Pure-Python RSA implementation.\n\nAffected versions of this package are vulnerable to Authentication Bypass due to not implementing authentication encryption or use MACs to validate messages before decrypting public key encrypted messages.\n\n## References\n- [GitHub Issue](https://github.com/sybrenstuvel/python-rsa/issues/13)\n- [GitHub Commit](https://github.com/sybrenstuvel/python-rsa/commit/1681a0b2f84a4a252c71b87de870a2816de06fdf)\n",
+          "identifiers": {
+            "CVE": [],
+            "CWE": [
+              "CWE-287"
+            ]
+          },
+          "credit": [
+            "Sergio Lerner"
+          ],
+          "exploitMaturity": "no-known-exploit",
+          "semver": {
+            "vulnerable": [
+              "[3.0,3.4)"
+            ]
+          },
+          "publicationTime": "2012-12-07T03:15:00.052000Z",
+          "disclosureTime": "2012-12-07T03:15:00.052000Z",
+          "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "cvssScore": 7.5,
+          "functions": [],
+          "language": "python",
+          "patches": [],
+          "nearestFixedInVersion": ""
+        },
+        "isPatched": false,
+        "isIgnored": false,
+        "fixInfo": {
+          "isUpgradable": false,
+          "isPinnable": true,
+          "isPatchable": false,
+          "isPartiallyFixable": true,
+          "nearestFixedInVersion": ""
+        }
+      },
+      {
+        "id": "SNYK-PYTHON-RSA-570831",
+        "issueType": "vuln",
+        "pkgName": "rsa",
+        "pkgVersions": [
+          "3.1.2"
+        ],
+        "priorityScore": 494,
+        "priority": {
+          "score": 494,
+          "factors": [
+            {
+              "name": "isFixable",
+              "description": "Has a fix available"
+            },
+            {
+              "name": "cvssScore",
+              "description": "CVSS 5.6"
+            }
+          ]
+        },
+        "issueData": {
+          "id": "SNYK-PYTHON-RSA-570831",
+          "title": "Access Restriction Bypass",
+          "severity": "medium",
+          "url": "https://snyk.io/vuln/SNYK-PYTHON-RSA-570831",
+          "description": "## Overview\n[rsa](https://pypi.org/project/rsa/) is a pure-Python RSA implementation.\n\nAffected versions of this package are vulnerable to Access Restriction Bypass. It does not detect `ciphertext` modification during decryption (prepended \"0\" bytes) in `PKCS1_v1_5`.\n## Remediation\nUpgrade `rsa` to version 4.1 or higher.\n## References\n- [GitHub Commit](https://github.com/sybrenstuvel/python-rsa/commit/93af6f2f89a9bf28361e67716c4240e691520f30)\n- [GitHub Issue](https://github.com/sybrenstuvel/python-rsa/issues/146)\n",
+          "identifiers": {
+            "CVE": [
+              "CVE-2020-13757"
+            ],
+            "CWE": [
+              "CWE-284"
+            ]
+          },
+          "credit": [
+            "Unknown"
+          ],
+          "exploitMaturity": "no-known-exploit",
+          "semver": {
+            "vulnerable": [
+              "[0,4.1)"
+            ]
+          },
+          "publicationTime": "2020-06-02T14:26:13Z",
+          "disclosureTime": "2020-06-02T13:45:26Z",
+          "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+          "cvssScore": 5.6,
+          "functions": [],
+          "language": "python",
+          "patches": [],
+          "nearestFixedInVersion": ""
+        },
+        "isPatched": false,
+        "isIgnored": false,
+        "fixInfo": {
+          "isUpgradable": false,
+          "isPinnable": true,
+          "isPatchable": false,
+          "isPartiallyFixable": true,
+          "nearestFixedInVersion": ""
+        }
+      }
+    ]
+  }
+  
