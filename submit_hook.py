@@ -37,6 +37,7 @@ headers = {
     'X-Snyk-Timestamp'  : f'{datetime.datetime.now(datetime.timezone.utc).isoformat()}',
     'X-Snyk-Event'      : 'project_snapshot/v0',
     'content-type'      : 'application/json',
+    'accept'            : 'application/json',
     'user-agent'        : USERAGENT
     }
 
