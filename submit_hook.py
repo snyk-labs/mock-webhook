@@ -7,7 +7,7 @@ import datetime
 
 
 # debugging command, ie webhook on demand with the proper checksum function included
-# python submit_hook.py no_new_vulns.json https://webhookurl/
+# python submit_hook.py data/no_new_vulns.json https://webhookurl/
 
 JSON = sys.argv[1]
 URL = sys.argv[2]
@@ -35,12 +35,11 @@ sig = generate_signature(data,SIGNATURE)
 
 headers = {
     'X-Hub-Signature'   : f'sha256={sig}',
-    'X-Snyk-Timestamp'  : f'{datetime.datetime.now().isoformat()}Z',
+    'X-Snyk-Timestamp'  : f'{datetime.datetime.now(datetime.timezone.utc).isoformat()}',
     'X-Snyk-Event'      : 'project_snapshot/v0',
     'content-type'      : 'application/json',
     'user-agent'        : USERAGENT
     }
-
 
 
 print(headers)
